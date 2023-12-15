@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="Css/Music.css">
+    <link rel="stylesheet" href="Css/Background.css">
+    <link rel="stylesheet" href="Css/Loading Screen.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1.0 user-scalable=no"/>
+    <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+</head>
+<body>
+    
+ <video class="bg" id="bg" src="Images/Bg1.mp4" muted loop autoplay preload="auto" disablePictureInPicture ></video>
+    
+<div class="loadingScreen">
+    <img style="border-radius: 20px;" src="Logo.png">
+</div>
+    
+<div id="player">
+    <div id="warning">Video Is Not Available</div>
+    <h1 id="back">⇚</h1>
+    <div id="avChanger">
+        <span id="mAudio">Audio</span>
+        <span id="mVideo">Video</span> 
+    </div>
+    <img id="cover" src="Covers/Roses.jpeg" alt="Cover Image">
+    <span id="backwardSkipBtn"></span>
+    <img id="backwardSkipAni" src="Images/Backward Skip.gif" alt="Backward Skip">
+    <span id="forwardSkipBtn"></span>
+    <img id="forwardSkipAni" src="Images/Forward Skip.gif" alt="Forward Skip">
+    <video id="video" width="400" src="Videos/Roses.mp4" type="video/mpeg" controls></video>
+    <div id="loader"></div>
+    <input value="1" id="progressBar" type="range">
+    <h1 id="preSong">⏮</h1> 
+    <h1 id="playBtn">▶</h1>
+    <h1 id="pauseBtn">▐▐</h1>
+    <h1 id="nextSong">⏭</h1>
+    <div id="timing">
+        <div id="playedDur"></div>
+        <div id="musicLength"></div>
+    </div>
+    <div id="length"></div>
+    <audio id="music" preload="none">
+        <source src="https://remixzilla.com/files/download/type/128/id/3921" type="audio/mpeg"></source>
+    </audio>
+</div>
+
+<h1 style="color: white; padding: 3px;">•Songs</h1>
+
+
+
+
+
+
+
+<div id="songList"></div>
+
+
+
+<script src="Js/Songs.js"></script>
+    <script src="Js/Music Short.js"></script>
+<script src="Js/Music Short 2.js"></script>
+<script src="Js/Autoplay Short.js"></script>
+<script src="Js/Next Music Play Short.js"></script>
+<script src="Js/Previous Music Play Short.js"></script>
+<script src="Js/Change To Audio Video.js"></script>
+<script src="Js/Background.js"></script>
+    <script src="Js/Full Screen.js"></script>
+<script src="Js/Screen Wake Lock.js"></script>
+<script src="Js/Document Close Or Open Short.js"></script>
+<script src="Js/Notification.js"></script>
+<script src="Js/Open Inspector.js"></script>
+<script src="Js/Forward Backward Skip.js"></script>
+
+<div class="br"></div>
+
+</body>
+</html>

@@ -1,0 +1,737 @@
+#backwardSkipAni{
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 190px;
+    visibility: hidden;
+}
+
+
+
+
+#forwardSkipAni{
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    width: 190px;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+#backwardSkipBtn{
+    position: absolute;
+    
+    width: 210px;
+    height: 300px;
+    left: 0;
+    top: 50px;}
+
+
+
+
+
+#forwardSkipBtn{
+    position: absolute;
+    
+    width: 210px;
+    height: 300px;
+    right: 0;
+    top: 50px;
+}
+
+
+
+
+
+
+#warning{
+    position: absolute;
+    bottom: 150px;
+    background: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    right: -270px;
+    animation:  1.5s linear ;
+}
+
+
+@keyframes warningShow {
+    10%{right: 90px;}
+    20%{right: 120px;}
+    40%{right: 80px;}
+    50%{right: 95px;}
+    100%{right: -270px;}
+}
+
+
+
+
+
+#avChanger{
+    background: #ffffff65;
+    height: 15px;
+    padding: 10px;
+    text-align: center;
+   margin-top: 5px;
+   margin-left: 50px;
+   border-radius: 30px;
+   display: flex;
+   align-items: center;
+   width: 130px;
+   
+}
+
+#mAudio{
+    margin-right: 15px;
+    background: grey;
+    
+    padding: 3px 10px;
+    border-radius: 15px;
+    animation:  0.2s linear forwards ;
+    }
+
+
+@keyframes mAudioClick {
+    from{
+    padding: 3px 75px 3px 10px;}
+    to{
+    padding: 3px 10px;}
+}
+
+#mVideo{
+    background: ;
+    padding: 3px 10px;
+    border-radius: 15px;
+    position: absolute;
+    right: 150px;
+    animation:  0.2s linear forwards ;
+    z-index: 0;
+  }
+
+@keyframes mVideoClick {
+    from{
+    padding: 3px 10px 3px 75px}
+    to{
+    padding: 3px 10px;}
+}
+
+
+#video{
+    position: absolute;
+    top: 85px;
+    right: -400px;
+    animation: 0.2s linear forwards;
+    background: grey;
+      
+     
+   
+}
+
+
+@keyframes openVideo {
+    100%{
+        right: 10px;
+    }
+}
+
+@keyframes videoClose {
+    from{right: 10px;}
+    to{right: -400px;}
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    overflow: auto;
+    user-select: none;
+   
+}
+#player{
+    position: fixed;
+    bottom: 0;
+}
+#loader {
+position: absolute;
+top: 70px;
+  border: 23px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 1s linear infinite;
+  
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#cover{
+position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 70px;
+    top: 50px;
+  animation: 0.3s linear forwards;
+}
+
+@keyframes coverClose {
+    100%{left: -300px;}
+}
+
+
+@keyframes coverOpen {
+    from{left: -300px;}
+    to{left: 70px;}
+}
+
+
+@keyframes coverDown {
+    
+
+100%{
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    left: 10px;
+    top: 10px;  /*never change */
+}}
+
+
+@keyframes coverUp {
+    
+
+from{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 13px;
+    top: 10px;
+}
+to{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 70px;
+    top: 50px;
+  animation: 0.3s linear forwards;
+}
+
+
+}
+
+
+
+
+
+#playBtn{position: absolute;
+z-index: -1;
+margin-right: -15px;
+top: 300px;
+border-radius: 40px;
+font-size: 100px;
+visibility: hidden;
+font-weight: bold;
+animation: 0.3s linear forwards;}
+
+@keyframes  playBtnDown{
+    
+
+100%{position: absolute;
+
+top: -90px;
+border-radius: 40px;
+font-size: 90px;
+font-weight: bold;
+right: 38px;}}
+
+@keyframes  playBtnUp{
+    
+
+0%{position: absolute;
+
+top: -90px;
+border-radius: 40px;
+font-size: 90px;
+font-weight: bold;
+right: 38px;}
+
+100%{
+   position: absolute;
+margin-right: -15px;
+top: 300px;
+border-radius: 40px;
+font-size: 100px;
+font-weight: bold;
+animation: 0.3s linear forwards; 
+}
+
+}
+
+
+#back{
+font-size: 60px;
+    position: absolute;
+    top: -67px;
+    left: 2px;
+    animation: 0.3s linear forwards;
+}
+
+@keyframes backDown {
+    100%{
+        position: absolute;
+    top: -12px;
+    left: 7px;
+    visibility: hidden;
+    }
+}
+
+
+
+@keyframes backUp {
+    0%{
+        position: absolute;
+    top: -12px;
+    left: 7px;
+    visibility: hidden;
+    }
+    
+    100%{
+      position: absolute;
+    top: -67px;
+    left: 2px;
+    animation: 0.3s linear forwards;  
+    }
+}
+
+
+#pauseBtn{position: absolute;
+z-index: 1; top: 368px;
+font-size: 50px;
+margin-left: -7px;
+font-weight: bold;
+border-radius: 10px;
+animation: 0.3s linear forwards;}
+
+@keyframes pauseBtnDown {
+    
+
+100%{position: absolute;
+z-index: 1; 
+top: -5px;
+font-size: 35px;
+font-weight: bold;
+border-radius: 10px;
+right: 50px;}}
+
+
+
+@keyframes pauseBtnUp {
+    
+
+0%{position: absolute;
+z-index: 1; 
+top: -5px;
+font-size: 35px;
+font-weight: bold;
+border-radius: 10px;
+right: 50px;}
+
+100%{
+    position: absolute;
+z-index: 1; top: 368px;
+font-size: 50px;
+font-weight: bold;
+border-radius: 10px;
+animation: 0.3s linear forwards;
+}
+
+}
+
+h1{display: inline;}
+
+#preSong{
+    position: absolute;
+    top: 365px;
+    left: 10px;
+    font-size: 50px;
+    border-radius: 10px;
+    animation: 0.3s linear forwards;
+}
+
+@keyframes preSongDown {
+    
+
+100%{
+    position: absolute;
+    top: -12px;
+    
+    font-size: 35px;
+    border-radius: 10px;
+    left: 290px;
+}}
+
+
+
+
+@keyframes preSongUp {
+    
+
+0%{
+    position: absolute;
+    top: -12px;
+    
+    font-size: 35px;
+    border-radius: 10px;
+    left: 290px;
+}
+100%{
+   position: absolute;
+    top: 365px;
+    left: 10px;
+    font-size: 50px;
+    border-radius: 10px;
+    animation: 0.3s linear forwards; 
+}
+
+}
+
+#nextSong{
+    position: absolute;
+    top: 365px;
+    right: 10px;
+    font-size: 50px;
+    border-radius: 10px;
+    animation: 0.3s linear forwards;
+}
+
+
+@keyframes nextSongDown {
+    
+
+100%{
+    position: absolute;
+    top: -12px;
+    right: 2px;
+    font-size: 35px;
+    border-radius: 10px;
+    
+}}
+
+
+@keyframes nextSongUp {
+    
+
+0%{
+    position: absolute;
+    top: -1px;
+    right: 2px;
+    font-size: 35px;
+    border-radius: 10px;
+    
+}
+
+
+100%{
+  position: absolute;
+    top: 365px;
+    right: 10px;
+    font-size: 50px;
+    border-radius: 10px;
+    animation: 0.3s linear forwards;  
+}
+
+}
+
+
+
+#progressBar{
+    width: 97vw;
+    position: absolute;
+    display: inline;
+    right: 5px;
+    top: 355px;
+    background-color: #ccc;
+    border-radius: 4px;
+    animation: 0.3s linear forwards;
+}
+@keyframes progressBarDown {
+    
+
+100%{
+    width: 43.7vw;
+    position: absolute;
+    display: inline;
+    left: 97px;
+    top: 10px;
+    background-color: #ccc;
+    border-radius: 4px;
+    
+}}
+
+
+
+
+@keyframes progressBarUp {
+    
+
+0%{
+    width: 42vw;
+    position: absolute;
+    display: inline;
+    left: 85px;
+    top: 10px;
+    background-color: #ccc;
+    border-radius: 4px;
+    
+}
+100%{
+ width: 97vw;
+    position: absolute;
+    display: inline;
+    right: 5px;
+    top: 355px;
+    background-color: #ccc;
+    border-radius: 4px;
+    animation: 0.3s linear forwards;   
+}
+
+}
+
+
+#playedDur{
+position: absolute;
+    left: 10px;
+    top: 373px;
+  animation: 0.3s linear forwards; }
+    @keyframes playedDurDown {
+        
+    
+    100%{
+position: absolute;
+    left: 105px;
+    top: 30px;}}
+    
+    
+    @keyframes playedDurUp {
+        
+    
+    0%{
+position: absolute;
+    left: 105px;
+    top: 30px;}
+   100%{
+     position: absolute;
+    left: 10px;
+    top: 373px;
+  animation: 0.3s linear forwards;  
+   } 
+    
+    
+    
+    }
+    
+   
+
+#progressBar::-webkit-slider-thumb { width: 36px;
+  height: 36px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+#music{
+    position: absolute;
+    top: 80px;
+}
+#aud2{
+    position: absolute;
+    top: 120px;
+}
+
+
+#timing{
+margin-top: 50px;
+margin-left: 50px;
+
+}
+
+
+
+
+
+
+
+
+#player{
+    z-index: 9999;
+    position: fixed;
+    outline: 2px solid red;
+    width: 100vw;
+    bottom: -900px;
+   
+   height : 100vh;
+   
+   background: grey;
+   display: flex;
+   justify-content: center;
+   animation:  0.3s linear;
+   animation-fill-mode: forwards;
+}
+
+
+
+@keyframes playerDown {
+    100%{
+       position: fixed;
+    outline: 2px solid red;
+    z-index: 9999;
+    bottom: 0px;
+   
+   height : 10vh;
+   transform-origin: bottom;
+   width: 100vw;
+   background: grey;
+   display: flex;
+   justify-content: center; 
+    }
+}
+
+
+@keyframes playerUp {
+    0%{
+    z-index: 9999;
+       position: fixed;
+    outline: 2px solid red;
+    
+    bottom: 0;
+   
+   height : 10vh;
+   width: 100vw;
+   background: grey;
+   display: flex;
+   justify-content: center; 
+    }
+    
+    
+    
+    100%{
+    z-index: 9999;
+     position: fixed;
+    outline: 2px solid red;
+    width: 100vw;
+    bottom: 0;
+   
+   height : 100vh;
+   width: 100vw;
+   background: grey;
+   display: flex;
+   justify-content: center;
+   animation:  0.3s linear;
+   animation-fill-mode: forwards;   
+    }
+}
+
+.song{
+    background: #9f9f9f9c;
+    border-radius: 20px;
+    margin: 10px 3px 10px 3px;
+    min-height: 120px;
+    padding: 10px;
+    font-size : 20px;
+    font-weight: bold;
+    color: white;
+}
+
+img{
+    width: 130px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-top: -5px;
+}
+
+
+
+
+
+
+#musicLength{
+    position: absolute;
+    right: 5px;
+    
+    top: 373px;
+    animation: 0.3s linear forwards;
+}
+
+@keyframes lengthDown {
+    
+
+100%{
+    position: absolute;
+    right: 45px;
+    
+    top: 30px;
+}}
+
+@keyframes lengthUp {
+    
+
+0%{
+    position: absolute;
+    right: 45px;
+    
+    top: 30px;
+}
+100%{
+   position: absolute;
+    right: 5px;
+    
+    top: 373px;
+    animation: 0.3s linear forwards;  
+}
+
+}
+
+
+
+#length{
+    position: absolute;
+    top: 30px;
+    left: 243px;
+    visibility: hidden;
+}
+

@@ -1,0 +1,22 @@
+.loadingScreen{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    animation: loading 1s linear forwards;
+    animation-delay: 2s;
+    background: black;
+    padding: 370px 138px;
+}
+
+@keyframes loading {
+    10%{filter: opacity(10%);}
+    20%{filter: opacity(100%);}
+    30%{filter: opacity(10%);}
+    40%{filter: opacity(100%);}
+    50%{filter: opacity(10%);}
+    60%{filter: opacity(100%);}
+    70%{filter: opacity(10%);}
+    80%{filter: opacity(100%);}
+    99%{filter: opacity(50%);}
+    100%{width: 0; height: 0; padding: 0; visibility: hidden;}
+}
